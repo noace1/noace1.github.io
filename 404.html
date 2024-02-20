@@ -331,7 +331,7 @@
 </header>
 
     <style type="text/css">
-    /* don't remove. */
+    /* 不要移除 */
     .about-cover {
         height: 90.2vh;
     }
@@ -360,12 +360,14 @@
 </div>
 
 
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script>
         // 每天切换 banner 图.  Switch banner image every day.
-        var bannerUrl = "/medias/banner/" + new Date().getDay() + '.jpg';
-        $('.bg-cover').css('background-image', 'url(' + bannerUrl + ')');
+        $(document).ready(function() {
+            var bannerUrl = "/medias/banner/" + new Date().getDay() + '.jpg';
+            $('.bg-cover').css('background-image', 'url(' + bannerUrl + ')');
+        });
     </script>
-
 
 
 
